@@ -1,0 +1,71 @@
+Microsoft Windows [Version 10.0.22631.5189]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\System32>mkdir learn_git
+A subdirectory or file learn_git already exists.
+
+C:\Windows\System32>cd learn_git
+
+C:\Windows\System32\learn_git>touch third.txt
+'touch' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Windows\System32\learn_git>echo "">third.txt
+
+C:\Windows\System32\learn_git>git init
+Reinitialized existing Git repository in C:/Windows/System32/learn_git/.git/
+
+C:\Windows\System32\learn_git>git add third.txt
+
+C:\Windows\System32\learn_git>git commit -m"adding third.txt"
+[master (root-commit) d4487b1] adding third.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 third.txt
+
+C:\Windows\System32\learn_git>git log
+commit d4487b1543e4466684ecaf8a7a2466c221e86e22 (HEAD -> master)
+Author: elkodsi.imad@gmail.com <elkodsi.imad@gmail.com>
+Date:   Fri May 9 17:54:20 2025 +0100
+
+    adding third.txt
+
+C:\Windows\System32\learn_git>echo "">fourth.txt
+
+C:\Windows\System32\learn_git>git add fourth.txt
+
+C:\Windows\System32\learn_git>git commit -m"adding fourth.txt"
+[master cae652d] adding fourth.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fourth.txt
+
+C:\Windows\System32\learn_git>rm third.txt
+'rm' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Windows\System32\learn_git>git add .
+
+C:\Windows\System32\learn_git>git commit -m"removing third.txt"
+On branch master
+nothing to commit, working tree clean
+
+C:\Windows\System32\learn_git>git log
+commit cae652da845d9ebe21da9b490e149815fb8fb3ab (HEAD -> master)
+Author: elkodsi.imad@gmail.com <elkodsi.imad@gmail.com>
+Date:   Fri May 9 17:56:44 2025 +0100
+
+    adding fourth.txt
+
+commit d4487b1543e4466684ecaf8a7a2466c221e86e22
+Author: elkodsi.imad@gmail.com <elkodsi.imad@gmail.com>
+Date:   Fri May 9 17:54:20 2025 +0100
+
+    adding third.txt
+
+C:\Windows\System32\learn_git>git config --global core.pager cat
+
+C:\Windows\System32\learn_git>git config --global --list
+user.name=elkodsi.imad@gmail.com
+user.email=elkodsi.imad@gmail.com
+core.pager=cat
+
+C:\Windows\System32\learn_git>
